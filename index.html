@@ -1,0 +1,1314 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Bhagyashree ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08030a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= LOADER ================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #08030a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: 1s;
+}
+
+#loader .loader-heart {
+    font-size: 75px;
+    animation: heartbeat 1s infinite;
+}
+
+#loader p {
+    margin-top: 15px;
+    color: #ff9ac2;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    color: #ff4f91;
+    animation: floatUp linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    background: rgba(8, 3, 10, 0.78);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff75aa;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff75aa;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 50px;
+    position: relative;
+    z-index: 2;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #4b102f 0%,
+            #180812 35%,
+            #08030a 70%
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-text {
+    color: #ff8eb9;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 10vw, 110px);
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ff5c9a;
+    text-shadow: 0 0 30px rgba(255,92,154,0.5);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #d9c7d0;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.scroll {
+    margin-top: 45px;
+    color: #aaa;
+    font-size: 13px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* ================= SECTIONS ================= */
+
+section:not(.hero) {
+    position: relative;
+    z-index: 2;
+}
+
+.section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #ff619d;
+}
+
+.section-subtitle {
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+/* ================= APOLOGY LETTER ================= */
+
+.letter-container {
+    max-width: 800px;
+    margin: auto;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,0.4);
+
+    text-align: left;
+
+    backdrop-filter: blur(10px);
+}
+
+.letter-container h3 {
+    color: #ff7eae;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.letter-container p {
+    color: #ddd;
+    line-height: 2;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.signature {
+    text-align: right;
+    color: #ff8eb9 !important;
+    font-size: 20px !important;
+    margin-top: 30px;
+}
+
+/* ================= REASONS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(255,92,154,0.5);
+
+    box-shadow:
+        0 20px 50px rgba(255,50,130,0.1);
+}
+
+.card .emoji {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #ff83b1;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* ================= MEMORIES ================= */
+
+.memories {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.memory {
+    height: 260px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4a1735,
+            #170a13
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    transition: 0.4s;
+}
+
+.memory:hover {
+    transform: scale(1.03);
+}
+
+.memory .big-heart {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.memory p {
+    color: #ddd;
+}
+
+/* ================= PROMISE ================= */
+
+.promise {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 55px 35px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,140,0.13),
+            rgba(100,20,70,0.1)
+        );
+
+    border: 1px solid rgba(255,100,160,0.2);
+}
+
+.promise h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.promise p {
+    color: #ccc;
+    line-height: 1.9;
+}
+
+/* ================= FINAL ================= */
+
+.final {
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a102e,
+            #08030a 65%
+        );
+}
+
+.final-box {
+    max-width: 800px;
+}
+
+.final-box .heart {
+    font-size: 90px;
+
+    animation:
+        heartbeat 1.3s infinite;
+
+    margin-bottom: 25px;
+}
+
+.final-box h2 {
+    font-size:
+        clamp(40px, 7vw, 75px);
+
+    margin-bottom: 20px;
+}
+
+.final-box p {
+    color: #ccc;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.yes {
+    background: #ff4f91;
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(255,79,145,0.3);
+}
+
+.yes:hover {
+    transform: scale(1.08);
+}
+
+.music {
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #555;
+}
+
+.music:hover {
+    border-color: #ff5c9a;
+
+    color: #ff8eb9;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #777;
+
+    background: #050205;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+footer span {
+    color: #ff619d;
+}
+
+/* ================= POPUP ================= */
+
+#popup {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.8);
+
+    backdrop-filter: blur(10px);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 500;
+
+    padding: 20px;
+}
+
+.popup-box {
+    background: #180a13;
+
+    border:
+        1px solid rgba(255,100,160,0.3);
+
+    border-radius: 25px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    max-width: 500px;
+
+    animation:
+        popup 0.5s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup-box h2 {
+    color: #ff73a9;
+    margin-bottom: 20px;
+}
+
+.popup-box p {
+    color: #ddd;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.close {
+    background: #ff4f91;
+    color: white;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    nav div:last-child {
+        display: none;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .letter-container {
+        padding: 30px 22px;
+    }
+
+    .cards,
+    .memories {
+        grid-template-columns: 1fr;
+    }
+
+    .memory {
+        height: 220px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= LOADING SCREEN ================= -->
+
+<div id="loader">
+
+    <div class="loader-heart">
+        ❤️
+    </div>
+
+    <p>
+        Preparing something from my heart...
+    </p>
+
+</div>
+
+
+<!-- ================= FLOATING HEARTS ================= -->
+
+<div class="hearts" id="hearts"></div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        For Bhagyashree ❤️
+    </div>
+
+    <div>
+
+        <a href="#sorry">
+            Sorry
+        </a>
+
+        <a href="#reasons">
+            Why You Matter
+        </a>
+
+        <a href="#promise">
+            Promise
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-text">
+            A little something from my heart
+        </div>
+
+        <h1>
+            I'm <span>Sorry</span>
+        </h1>
+
+        <p>
+            To the person who means more to me than words can explain.
+            I know I made a mistake, and this little website is my way
+            of saying what I sometimes fail to say properly.
+        </p>
+
+        <div class="scroll">
+            ↓ Scroll down, I have something to tell you ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APOLOGY ================= -->
+
+<section class="section" id="sorry">
+
+    <h2 class="section-title">
+        My <span>Apology</span>
+    </h2>
+
+    <p class="section-subtitle">
+        Please read this until the end ❤️
+    </p>
+
+
+    <div class="letter-container">
+
+        <h3>
+            Dear Bhagyashree, ❤️
+        </h3>
+
+
+        <p>
+            I don't really know where to start, so I'll start with the
+            simplest thing I can say:
+        </p>
+
+
+        <p>
+            <strong>
+                I'm genuinely sorry.
+            </strong>
+        </p>
+
+
+        <p>
+            I know that saying "sorry" doesn't magically fix everything.
+            I know that my actions may have hurt you, upset you, or made
+            you feel like you weren't important to me.
+        </p>
+
+
+        <p>
+            But the truth is, you are important to me.
+            A lot more than I probably show sometimes.
+        </p>
+
+
+        <p>
+            I wish I could go back and change the moment where I messed up.
+            I can't do that, but I can learn from it and make sure I don't
+            repeat the same mistake.
+        </p>
+
+
+        <p>
+            You deserve patience, respect, honesty, understanding and
+            someone who makes you feel loved instead of making you feel hurt.
+        </p>
+
+
+        <p>
+            I don't expect you to forget everything immediately.
+            I just hope you can see that I genuinely regret what happened
+            and that I'm willing to make things right.
+        </p>
+
+
+        <p>
+            Thank you for every laugh, every conversation, every little
+            moment, and every memory we've created.
+        </p>
+
+
+        <p>
+            I'm sorry for hurting you.
+            I'm sorry for disappointing you.
+            And most importantly, I'm sorry for making you feel anything
+            less than loved.
+        </p>
+
+
+        <p>
+            I really hope you can forgive me someday.
+        </p>
+
+
+        <p class="signature">
+            — Yours ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY SHE MATTERS ================= -->
+
+<section class="section" id="reasons">
+
+    <h2 class="section-title">
+        Why You <span>Matter</span> To Me
+    </h2>
+
+    <p class="section-subtitle">
+        It's not just one thing...
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="emoji">
+                😊
+            </div>
+
+            <h3>
+                Your Smile
+            </h3>
+
+            <p>
+                Your smile can genuinely make a bad day feel a little
+                better. It's one of those little things I never want
+                to take for granted.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                ❤️
+            </div>
+
+            <h3>
+                Your Heart
+            </h3>
+
+            <p>
+                You care deeply, you love deeply, and that's something
+                incredibly special about you.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                ✨
+            </div>
+
+            <h3>
+                You
+            </h3>
+
+            <p>
+                Not because you're perfect, but because you're you.
+                And that's more than enough for me.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= MEMORIES ================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Our Little <span>Memories</span>
+    </h2>
+
+    <p class="section-subtitle">
+        Some moments are worth keeping forever.
+    </p>
+
+
+    <div class="memories">
+
+
+        <div class="memory">
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <p>
+                Our first special moment
+            </p>
+
+        </div>
+
+
+
+        <div class="memory">
+
+            <div class="big-heart">
+                🥹
+            </div>
+
+            <p>
+                Those random conversations
+            </p>
+
+        </div>
+
+
+
+        <div class="memory">
+
+            <div class="big-heart">
+                💕
+            </div>
+
+            <p>
+                The moments that made us smile
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROMISE ================= -->
+
+<section class="section" id="promise">
+
+    <div class="promise">
+
+        <h2>
+            A Promise ❤️
+        </h2>
+
+        <p>
+
+            I can't promise that I'll never make another mistake.
+            I'm human, and I know I'll mess up sometimes.
+
+            But I can promise that I'll try harder to understand you,
+            listen to you, respect your feelings, and learn from my mistakes.
+
+            I don't want an apology to just be words.
+
+            I want my actions to prove it.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL QUESTION ================= -->
+
+<section class="final">
+
+    <div class="final-box">
+
+
+        <div class="heart">
+            ❤️
+        </div>
+
+
+        <h2>
+            Can You Forgive Me?
+        </h2>
+
+
+        <p>
+
+            I know I may not deserve an instant answer.
+            Take your time.
+
+            I just wanted you to know that I'm truly sorry
+            and that you mean a lot to me.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+            <button
+                class="yes"
+                onclick="forgive()">
+
+                I Forgive You ❤️
+
+            </button>
+
+
+            <button
+                class="music"
+                onclick="showMessage()">
+
+                Read One More Thing
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Made with
+    <span>❤️</span>
+    and a genuinely sorry heart.
+
+</footer>
+
+
+<!-- ================= POPUP ================= -->
+
+<div id="popup">
+
+
+    <div class="popup-box">
+
+
+        <h2>
+            One Last Thing ❤️
+        </h2>
+
+
+        <p>
+
+            No matter what your answer is,
+            thank you for taking the time to read this.
+
+            I hope someday you'll remember this not just as an apology,
+            but as proof that I cared enough to put my feelings into words.
+
+            I'm really sorry. ❤️
+
+        </p>
+
+
+        <button
+            class="close"
+            onclick="closePopup()">
+
+            Close ❤️
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ================= LOADING ================= */
+
+window.addEventListener("load", function() {
+
+    setTimeout(function() {
+
+        document.getElementById("loader").style.opacity = "0";
+
+        setTimeout(function() {
+
+            document.getElementById("loader").style.display = "none";
+
+        }, 1000);
+
+    }, 1800);
+
+});
+
+
+/* ================= FLOATING HEARTS ================= */
+
+const heartsContainer =
+    document.getElementById("hearts");
+
+
+const heartSymbols = [
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘"
+];
+
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.classList.add(
+        "floating-heart"
+    );
+
+
+    heart.innerHTML =
+        heartSymbols[
+            Math.floor(
+                Math.random() *
+                heartSymbols.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+
+    heart.style.fontSize =
+        (Math.random() * 20 + 12)
+        + "px";
+
+
+    heart.style.animationDuration =
+        (Math.random() * 6 + 5)
+        + "s";
+
+
+    heart.style.animationDelay =
+        Math.random() * 3
+        + "s";
+
+
+    heartsContainer.appendChild(
+        heart
+    );
+
+
+    setTimeout(function() {
+
+        heart.remove();
+
+    }, 12000);
+
+}
+
+
+setInterval(
+    createHeart,
+    500
+);
+
+
+/* ================= FORGIVENESS ================= */
+
+function forgive() {
+
+    document.getElementById("popup")
+        .style.display = "flex";
+
+    createHeartBurst();
+
+}
+
+
+/* ================= MESSAGE ================= */
+
+function showMessage() {
+
+    document.getElementById("popup")
+        .style.display = "flex";
+
+}
+
+
+/* ================= CLOSE ================= */
+
+function closePopup() {
+
+    document.getElementById("popup")
+        .style.display = "none";
+
+}
+
+
+/* ================= HEART BURST ================= */
+
+function createHeartBurst() {
+
+    for (let i = 0; i < 30; i++) {
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.innerHTML = "❤️";
+
+
+        heart.style.position =
+            "fixed";
+
+
+        heart.style.left =
+            "50%";
+
+
+        heart.style.top =
+            "50%";
+
+
+        heart.style.fontSize =
+            "25px";
+
+
+        heart.style.zIndex =
+            "1000";
+
+
+        heart.style.pointerEvents =
+            "none";
+
+
+        const angle =
+            Math.random() *
+            Math.PI * 2;
+
+
+        const distance =
+            Math.random() *
+            300 + 100;
+
+
+        const x =
+            Math.cos(angle) *
+            distance;
+
+
+        const y =
+            Math.sin(angle) *
+            distance;
+
+
+        heart.animate(
+
+            [
+                {
+                    transform:
+                        "translate(-50%, -50%) scale(0)",
+
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                        `translate(
+                            calc(-50% + ${x}px),
+                            calc(-50% + ${y}px)
+                        ) scale(1.5)`,
+
+                    opacity: 0
+                }
+            ],
+
+            {
+                duration: 1500,
+                easing: "ease-out"
+            }
+
+        );
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(function() {
+
+            heart.remove();
+
+        }, 1600);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
